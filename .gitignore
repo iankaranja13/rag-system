@@ -1,0 +1,21 @@
+# OS / editor
+.DS_Store
+*.swp
+.vscode/
+__pycache__/
+*.pyc
+
+# Python env
+.venv/
+.env
+
+# Data & indices (don’t commit big artifacts)
+data/documents/*
+data/processed/*
+data/vector_stores/*
+
+# Streamlit
+.streamlit/secrets.toml
+
+# Cache
+*.cache

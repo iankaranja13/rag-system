@@ -1,0 +1,40 @@
+# --- Core app ---
+streamlit
+plotly
+python-dotenv
+
+# --- LangChain + Ecosystem ---
+langchain
+langchain-core
+langchain-community
+langchain-openai
+langchain-text-splitters
+langchain-google-genai
+
+# --- Models & Embeddings ---
+openai
+cohere
+google-generativeai
+sentence-transformers
+faiss-cpu
+rank-bm25
+
+# --- Data processing ---
+PyPDF2
+python-docx
+docx2txt
+unstructured
+lxml
+
+# --- Utilities ---
+numpy
+pandas
+scikit-learn
+tqdm
+requests
+validators
+
+# --- Optional NLP tools ---
+nltk
+regex
+youtube-transcript-api
