@@ -1,20 +1,34 @@
-# app.py
+# =========================
+# Top of app.py - Apple Silicon Safe Setup
+# =========================
 
-import streamlit as st
 import os
+
+# Limit threads to prevent segmentation fault on Apple Silicon
+os.environ["OMP_NUM_THREADS"] = "1"
+os.environ["MKL_NUM_THREADS"] = "1"
+os.environ["PYTORCH_ENABLE_MPS_FALLBACK"] = "1"  # Apple Silicon GPU fallback
+
+# =========================
+# Standard imports
+# =========================
+import streamlit as st
 import pandas as pd
 from datetime import datetime
 from typing import List, Dict, Any
 import plotly.express as px
 import plotly.graph_objects as go
 
+# =========================
 # Local imports
+# =========================
 from config.settings import Config
 from src.document_processor import DocumentProcessor
 from src.embeddings import EmbeddingManager
 from src.generator import MedicalResponseGenerator
 from src.retriever import MedicalRetriever
 from utils.helpers import format_sources, create_download_link
+
 
 # Page configuration
 st.set_page_config(
@@ -831,5 +845,5 @@ def main():
 
 if __name__ == "__main__":
     main()
-app.py
+
 
